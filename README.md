@@ -10,6 +10,6 @@ In this repo :
 
 <img src="https://github.com/AmauryMaros/Flask-search-engine/blob/main/static/flask-search-engine.jpg">
 
-4/ Go to the app :
+4/ Deployment with render :
 
-[flask-search-engine.amaurymaros.repl.co](https://flask-search-engine--amaurymaros.repl.co/)
+https://flask-search-engine.onrender.com/

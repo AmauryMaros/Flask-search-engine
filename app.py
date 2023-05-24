@@ -3,7 +3,8 @@ from database import games_from_db, games_name_from_db,platform_from_db,metascor
 
 app = Flask(__name__)
 app.secret_key="secretkey"
-app.config["SESSION_COOKIE_NAME"] ="myCOOKIE"
+#app.config["SESSION_COOKIE_NAME"] ="cookie"
+app.config["SESSION_TYPE"] = "filesystem"
 
 @app.route("/",methods=['POST','GET'])
 def index():
@@ -23,18 +24,3 @@ def choice():
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
-
-
-"""
-@app.route("/result",methods=['POST'])
-def result():
-  games = games_from_db()
-  games_name = games_name_from_db()
-  search = request.form['content']
-  correspondance = 0
-  if search in games_name:
-    correspondance = True
-  else :
-    correspondance = False
-  return render_template('result.html', games=games, games_name=games_name,search=search, correspondance = correspondance)
-"""

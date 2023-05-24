@@ -1,0 +1,44 @@
+body{
+  font-family: "OCR A Std", monospace;
+}
+
+h2 {
+  text-align: center;
+  color :#01A88A;
+}
+
+h3 {
+  color : #01A88A;
+}
+
+.searchbox{
+  width : 35%;
+  margin: 50px auto 10px;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding : 20px;
+}
+
+.resultbox{
+  width : 45%;
+  margin: 35px auto 35px;
+}
+
+#search{
+  background-color: #01A88A;
+  border-radius : 15px;
+  color: white;
+  font-weight: bold;
+  border : 2px solid white;
+  margin: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+select{
+  background-color: white;
+  padding: 8px 0;
+  border-radius: 15px;
+  border: 2px solid #01A88A;
+  font-family: "OCR A Std", monospace;
+}

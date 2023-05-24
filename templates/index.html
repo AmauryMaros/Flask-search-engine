@@ -4,37 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
   <title>Search Engine</title>
 </head>
   
 <body>
   <h2>Search Engine Web App with Cloud MySQL DataBase</h2>
-  <h3>Search a Game</h3>
-
+  
+  <div class="searchbox">
+    <h3>Search a Game</h3>
     <form action="/choice" method="POST">
       <select name="game_choice" class="form-select" aria-label="Default select example">
         {% for game in games_name %}
           <option value="{{game}}">{{game}}</option>
         {% endfor %}
-          <input type="submit" value="Search">
+          <input id="search" type="submit" value="Search">
       </select>
     </form>
-  <p>We will search into our video games database</p>
-  
-  {% if game_choice  %}
-  <h3>Results</h3>
-  <p>Name : {{game_choice}}</p>
-  <p>Platform : {{platform[games_name.index(game_choice)]}}</p>
-  <p>Date : {{date[games_name.index(game_choice)]}}</p>
-  <p>Metascore : {{metascore[games_name.index(game_choice)]}} / 100</p>
-  <p>Userscore : {{userscore[games_name.index(game_choice)]}} / 10</p>
-  <p>More information : <a href="https://www.metacritic.com{{url[games_name.index(game_choice)]}}">{{game_choice}}</a></p>
+  <p>Try to find your favorite video games into our database to get informations on it</p>
   </div>
-  
-  {%else%}
-  <h3>Results</h3>
-  {%endif%}
 
+  <div class="resultbox">
+  {% if game_choice  %}
+  
+    <h3>Results</h3>
+    <p>Name : {{game_choice}}</p>
+    <p>Platform : {{platform[games_name.index(game_choice)]}}</p>
+    <p>Date : {{date[games_name.index(game_choice)]}}</p>
+    <p>Metascore : {{metascore[games_name.index(game_choice)]}} / 100</p>
+    <p>Userscore : {{userscore[games_name.index(game_choice)]}} / 10</p>
+    <p>More information : <a href="https://www.metacritic.com{{url[games_name.index(game_choice)]}}">{{game_choice}}</a></p>
+  
+  {%endif%}
+  </div>
+</div>
 </select>
 </body>
 </html>

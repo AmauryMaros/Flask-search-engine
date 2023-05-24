@@ -9,7 +9,3 @@ In this repo :
 3/ Creation of HTML form to get informations about a game with a hyperlink to redirect to the metacritc's webpage
 
 <img src="https://github.com/AmauryMaros/Flask-search-engine/blob/main/static/flask-search-engine.jpg">
-
-4/ Deployment with render :
-
-https://flask-search-engine.onrender.com/

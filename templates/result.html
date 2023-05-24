@@ -1,5 +1,4 @@
 <p>Result Page</p>
-
 <p>You have researched : {{search}}</p>
 
 <p>The correspondance is : {{correspondance}}</p>
@@ -16,12 +15,19 @@
 </div>
 
 {{games}}
-  <form action="/result" method="POST">
-  <select class="form-select" aria-label="Default select example">
+  <form action="/choice" method="POST">
+  <select name="choice" class="form-select" aria-label="Default select example">
       <option  value="1">Choose a game</option>
     {% for game in games_name %}
       <option value="1+{{games_name.index}}">{{game}}</option>
     {% endfor %}
+
+
+      <form action="/result" method="POST">
+      <input type="text" id="content" name="content">
+      <input type="submit" value="Search">
+  </form>
+
   </select>
   </form>
 

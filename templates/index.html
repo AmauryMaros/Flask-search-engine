@@ -9,23 +9,31 @@
   
 <body>
   <h2>Search Engine Web App with Cloud MySQL DataBase</h2>
-
   <h3>Search a Game</h3>
-  <form action="/result" method="POST">
-      <input type="text" id="content" name="content">
-      <input type="submit" value="Search">
-  </form>
-  <p>We will search into our video games databse if your game is referenced</p>
 
-  {}
-  <h3>Results :</h3>
-  <p>Name : </p>
-  <p>Platform : </p>
-  <p>Date : </p>
-  <p>More information : </p>
+    <form action="/choice" method="POST">
+      <select name="game_choice" class="form-select" aria-label="Default select example">
+        {% for game in games_name %}
+          <option value="{{game}}">{{game}}</option>
+        {% endfor %}
+          <input type="submit" value="Search">
+      </select>
+    </form>
+  <p>We will search into our video games database</p>
+  
+  {% if game_choice  %}
+  <h3>Results</h3>
+  <p>Name : {{game_choice}}</p>
+  <p>Platform : {{platform[games_name.index(game_choice)]}}</p>
+  <p>Date : {{date[games_name.index(game_choice)]}}</p>
+  <p>Metascore : {{metascore[games_name.index(game_choice)]}} / 100</p>
+  <p>Userscore : {{userscore[games_name.index(game_choice)]}} / 10</p>
+  <p>More information : <a href="https://www.metacritic.com{{url[games_name.index(game_choice)]}}">{{game_choice}}</a></p>
   </div>
-
-
+  
+  {%else%}
+  <h3>Results</h3>
+  {%endif%}
 
 </select>
 </body>

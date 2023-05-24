@@ -2,7 +2,7 @@
 
 In this repo :
 
-1/ Creation of a database from our webscraped data :
+1/ Creation of a database from our <a href="https://github.com/AmauryMaros/Scraping-BeautifulSoup">webscraped data</a>
 
 2/ Connection between the Flask app & the database
 

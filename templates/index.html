@@ -14,7 +14,7 @@
   <div class="searchbox">
     <h3>Search a Game</h3>
     <form action="/choice" method="POST">
-      <select name="game_choice" class="form-select" aria-label="Default select example">
+      <select name="game_choice" aria-label="Default select example">
         {% for game in games_name %}
           <option value="{{game}}">{{game}}</option>
         {% endfor %}

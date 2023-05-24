@@ -16,3 +16,16 @@
 </div>
 
 {{games}}
+  <form action="/result" method="POST">
+  <select class="form-select" aria-label="Default select example">
+      <option  value="1">Choose a game</option>
+    {% for game in games_name %}
+      <option value="1+{{games_name.index}}">{{game}}</option>
+    {% endfor %}
+  </select>
+  </form>
+
+
+    
+
+  

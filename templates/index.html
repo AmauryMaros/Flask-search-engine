@@ -9,7 +9,7 @@
 </head>
   
 <body>
-  <h2>Search Engine Web App with Cloud MySQL DataBase</h2>
+  <h2>Database Search Engine</h2>
   
   <div class="searchbox">
     <h3>Search a Game</h3>
@@ -28,16 +28,14 @@
   {% if game_choice  %}
   
     <h3>Results</h3>
-    <p>Name : {{game_choice}}</p>
-    <p>Platform : {{platform[games_name.index(game_choice)]}}</p>
-    <p>Date : {{date[games_name.index(game_choice)]}}</p>
-    <p>Metascore : {{metascore[games_name.index(game_choice)]}} / 100</p>
-    <p>Userscore : {{userscore[games_name.index(game_choice)]}} / 10</p>
+    <p>The game {{game_choice}} developped on {{platform[games_name.index(game_choice)]}} is released on {{date[games_name.index(game_choice)]}}. He got a score of {{metascore[games_name.index(game_choice)]}} / 100 on Metacritic and the players rated it {{userscore[games_name.index(game_choice)]}} / 10.</p>
     <p>More information : <a href="https://www.metacritic.com{{url[games_name.index(game_choice)]}}">{{game_choice}}</a></p>
   
   {%endif%}
   </div>
 </div>
 </select>
+
+  <p class="footer">This web app is developped with Flask. The database has been created with MySQL from webscraped data with BeautifulSoup and deployed on the cloud with PlanetScale. The app is deployed with render.com</p>
 </body>
 </html>

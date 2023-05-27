@@ -1,5 +1,5 @@
 body{
-  font-family: "OCR A Std", monospace;
+  font-family: "Roboto", sans-serif ;
 }
 
 h2 {
@@ -41,20 +41,21 @@ form {
   background-color: #01A88A;
   border-radius : 15px;
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   border : 2px solid white;
-  margin: 10px;
-  padding: 10px 15px;
+  margin: 5px;
+  padding: 5px 15px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 select{
   background-color: white;
-  padding: 8px 0;
   border-radius: 15px;
   border: 2px solid #01A88A;
-  font-family: "OCR A Std", monospace;
+  font-family: "Roboto", sans-serif;
   width: auto;
+  height: 35px;
 }
 
 .footer{
